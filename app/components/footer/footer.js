@@ -165,7 +165,7 @@ export default function Footer() {
                     <Link href="/">
                       <Image
                         src={logo}
-                        height={50}
+                        height={70}
                         width={180}
                         alt="echogee Logo"
                       />

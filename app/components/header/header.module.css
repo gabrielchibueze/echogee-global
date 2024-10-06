@@ -77,28 +77,34 @@
 }
 
 .mobileMenuLinks > li,
-.desktopMenuLinks > li {
+.desktopMenuLinks > div > li {
   list-style: none;
   background-color: #eaeff3;
   padding: 1rem;
   padding: 0.5rem 1rem;
 }
-.desktopMenuLinks > li {
-  border: 1px solid #d4dde5;
+.desktopMenuLinks > div > li {
+  display: flex;
+  border-left: 1px solid #d4dde5;
+  align-items: center;
+  justify-content: space-between;
 }
-@media (max-width: 800px) {
+.desktopMenuLinks > div > li:last-child {
+  border-right: 1px solid #d4dde5;
+}
+@media (max-width: 1000px) {
   .desktopMenuLinks > div > li {
-    padding: 0.6rem;
+    padding: 0.5rem;
   }
 }
 @media (min-width: 1200px) {
-  .desktopMenuLinks > li {
+  .desktopMenuLinks > div > li {
     min-width: 150px;
     padding: 0.7rem 0.8rem;
   }
 }
 .mobileMenuLinks > div > li:hover,
-.desktopMenuLinks > li:hover {
+.desktopMenuLinks > div > li:hover {
   list-style: none;
   background-color: #d4dde5;
 }
@@ -106,9 +112,9 @@
 .mobileMenuLinks > div > li > a:hover,
 .mobileMenuLinks > div > li > a:active,
 .mobileMenuLinks > div > li > a:focus,
-.desktopMenuLinks > li > a:hover,
-.desktopMenuLinks > li > a:active,
-.desktopMenuLinks > li > a:focus {
+.desktopMenuLinks > div > li > a:hover,
+.desktopMenuLinks > div > li > a:active,
+.desktopMenuLinks > div > li > a:focus {
   list-style: none;
   padding-bottom: 2px;
   color: #eb1d1d;
@@ -227,12 +233,9 @@
   width: fit-content;
   display: flex;
   flex-direction: column;
-  margin-left: -1rem;
-  margin-top: 1rem;
   z-index: 25;
   min-width: 160px;
   max-width: 200px;
-  margin-top: 0.5rem;
   position: absolute;
   animation: var(--animationSlideIn);
   height: fit-content;
@@ -263,8 +266,15 @@
   gap: 0.8rem;
   align-content: center;
   justify-content: center;
+  font-size: 0.5rem;
+  width: 50px;
+  margin-top: -0.3rem;
+  position: relative;
+  cursor: pointer;
 }
-
+.menuwithsubs > P:hover {
+  color: #eb1d1d;
+}
 @media (min-width: 1000px) {
   .menuwithsubs {
     gap: 2rem;

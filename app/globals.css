@@ -31,7 +31,7 @@
   }
 
   to {
-    top: 9rem;
+    top: 10rem;
   }
 }
 
@@ -108,10 +108,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: var(--foreground);
-  background: var(--background);
-  color: #0a0a0a;
-  background: #ffffff;
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -156,10 +156,10 @@ export default function Header() {
       >
         <div className={classes.logosection}>
           <Link href="/" onClick={closeMenu}>
-            <Image src={logo} height={50} width={180} alt="echogee Logo" />
+            <Image src={logo} height={70} width={180} alt="echogee Logo" />
           </Link>
           <div>
-            <Link href="mailto:info@echogeeglobal.co.uk">Webemail</Link> |{" "}
+            <Link href="mailto:info@echogeeglobal.co.uk">Quick Email</Link> |{" "}
             <Link href="/careers">Careers</Link>
           </div>
         </div>
@@ -174,39 +174,29 @@ export default function Header() {
             >
               <ul className={classes.desktopMenuLinks}>
                 {menuLinks.map((menu, index) => (
-                  <li
-                    key={menu.link}
-                    onMouseLeave={() => menu.submenu && showSubMenu(index)}
+                  <div
+                    onMouseLeave={() => showSubMenu(index)}
                     onClick={() => showSubMenu(index)}
-                    // onMouseEnter={() => showSubMenu(index)}
-                    onMouseDown={() => showSubMenu(index)}
                   >
-                    <Link
-                      className={`${
-                        pathname === `${menu.link}` ? classes.isActive : ""
-                      } ${
-                        pathname.startsWith(menu.link) && menu.link !== "/"
-                          ? classes.isActive
-                          : ""
-                      }`}
-                      href={menu.link}
-                    >
-                      <div className={classes.menuwithsubs}>
-                        <span> {menu.name}</span>
-                        {menu.submenu && (
-                          <span
-                            style={{
-                              rotate: "-360deg",
-                              height: "1rem",
-                              fontSize: "0.5rem",
-                              // marginTop: "-0.1rem",
-                            }}
-                          >
-                            V
-                          </span>
-                        )}
-                      </div>{" "}
-                    </Link>
+                    <li key={menu.link}>
+                      <Link
+                        className={`${
+                          pathname === `${menu.link}` ? classes.isActive : ""
+                        } ${
+                          pathname.startsWith(menu.link) && menu.link !== "/"
+                            ? classes.isActive
+                            : ""
+                        }`}
+                        href={menu.link}
+                      >
+                        {menu.name}
+                      </Link>
+                      {menu.submenu && (
+                        <div className={classes.menuwithsubs}>
+                          <p> v</p>
+                        </div>
+                      )}
+                    </li>
                     {menu.submenu &&
                       isActiveIndex === index &&
                       menu.viewSub && (
@@ -218,7 +208,7 @@ export default function Header() {
                           ))}
                         </ul>
                       )}
-                  </li>
+                  </div>
                 ))}
               </ul>
               {socials}
