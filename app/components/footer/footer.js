@@ -167,7 +167,7 @@ export default function Footer() {
                         src={logo}
                         height={50}
                         width={180}
-                        alt="Coseng Logo"
+                        alt="echogee Logo"
                       />
                     </Link>
                   </li>

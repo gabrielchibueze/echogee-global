@@ -75,7 +75,7 @@ export default function Header() {
   });
 
   const [fixHeader, setFixedHeader] = useState(false);
-
+  const [isActiveIndex, setIsActiveIndex] = useState(null);
   useEffect(() => {
     function scrollHandler() {
       const scrollHeight = document.documentElement.scrollHeight;
@@ -97,6 +97,8 @@ export default function Header() {
           : { ...menu, viewSub: false }
       )
     );
+
+    setIsActiveIndex(index);
   }
 
   function toggleMenu() {
@@ -154,10 +156,10 @@ export default function Header() {
       >
         <div className={classes.logosection}>
           <Link href="/" onClick={closeMenu}>
-            <Image src={logo} height={50} width={180} alt="Coseng Logo" />
+            <Image src={logo} height={50} width={180} alt="echogee Logo" />
           </Link>
           <div>
-            <Link href="mailto:info@coseng.co.uk">Webemail</Link> |{" "}
+            <Link href="mailto:info@echogeeglobal.co.uk">Webemail</Link> |{" "}
             <Link href="/careers">Careers</Link>
           </div>
         </div>
@@ -172,50 +174,51 @@ export default function Header() {
             >
               <ul className={classes.desktopMenuLinks}>
                 {menuLinks.map((menu, index) => (
-                  <div
-                    key={menu.name}
-                    onMouseLeave={() => showSubMenu(index)}
+                  <li
+                    key={menu.link}
+                    onMouseLeave={() => menu.submenu && showSubMenu(index)}
                     onClick={() => showSubMenu(index)}
-                    onMouseEnter={() => showSubMenu(index)}
+                    // onMouseEnter={() => showSubMenu(index)}
+                    onMouseDown={() => showSubMenu(index)}
                   >
-                    <li key={menu.link}>
-                      <Link
-                        className={`${
-                          pathname === `${menu.link}` ? classes.isActive : ""
-                        } ${
-                          pathname.startsWith(menu.link) && menu.link !== "/"
-                            ? classes.isActive
-                            : ""
-                        }`}
-                        href={menu.link}
-                      >
-                        <div className={classes.menuwithsubs}>
-                          <span> {menu.name}</span>
-                          {menu.submenu && (
-                            <span
-                              style={{
-                                rotate: "-360deg",
-                                height: "1rem",
-                                fontSize: "0.5rem",
-                                marginTop: "-0.1rem",
-                              }}
-                            >
-                              v
-                            </span>
-                          )}
-                        </div>{" "}
-                      </Link>
-                    </li>
-                    {menu.submenu && menu.viewSub && (
-                      <ul className={classes.subMenu}>
-                        {menu.submenu.map((subMenu) => (
-                          <Link key={subMenu.link} href={subMenu.link}>
-                            <li>{subMenu.name}</li>
-                          </Link>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+                    <Link
+                      className={`${
+                        pathname === `${menu.link}` ? classes.isActive : ""
+                      } ${
+                        pathname.startsWith(menu.link) && menu.link !== "/"
+                          ? classes.isActive
+                          : ""
+                      }`}
+                      href={menu.link}
+                    >
+                      <div className={classes.menuwithsubs}>
+                        <span> {menu.name}</span>
+                        {menu.submenu && (
+                          <span
+                            style={{
+                              rotate: "-360deg",
+                              height: "1rem",
+                              fontSize: "0.5rem",
+                              // marginTop: "-0.1rem",
+                            }}
+                          >
+                            V
+                          </span>
+                        )}
+                      </div>{" "}
+                    </Link>
+                    {menu.submenu &&
+                      isActiveIndex === index &&
+                      menu.viewSub && (
+                        <ul className={classes.subMenu}>
+                          {menu.submenu.map((subMenu) => (
+                            <Link key={subMenu.link} href={subMenu.link}>
+                              <li>{subMenu.name}</li>
+                            </Link>
+                          ))}
+                        </ul>
+                      )}
+                  </li>
                 ))}
               </ul>
               {socials}

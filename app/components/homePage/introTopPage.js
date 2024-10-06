@@ -77,7 +77,7 @@ export default function IntroPageTop() {
       );
     }, 7000);
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, allServiceList.length]);
   return (
     <div className={classes.introTopPage}>
       {allServiceList.map((service, index) => {
