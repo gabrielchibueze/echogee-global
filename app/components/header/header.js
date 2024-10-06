@@ -175,6 +175,7 @@ export default function Header() {
               <ul className={classes.desktopMenuLinks}>
                 {menuLinks.map((menu, index) => (
                   <div
+                    key={menu.name}
                     onMouseLeave={() => showSubMenu(index)}
                     onClick={() => showSubMenu(index)}
                   >
