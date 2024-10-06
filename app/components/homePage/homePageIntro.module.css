@@ -1,0 +1,103 @@
+.introSection {
+  position: relative;
+  padding: 0px 0px;
+  background: #f2f5f7 url("/images//bg-pattern.jpg");
+  text-align: center;
+  overflow: hidden;
+}
+.autoContainer {
+  position: static;
+  max-width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+.inner {
+  position: relative;
+  padding: 40px 90px 40px 60px;
+}
+.contentBox {
+  position: relative;
+  padding: 40px 60px 40px 40px;
+  color: #b4ddfd;
+  z-index: 2;
+  text-align: center;
+}
+.contentBox > h2 {
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.contentBox > p {
+  max-width: 50rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.skewLine,
+.contentBox::before {
+  transform: skewX(-22deg);
+  -webkit-transform: skewX(-22deg);
+  -moz-transform: skewX(-22deg);
+  -o-transform: skewX(-22deg);
+  -ms-transform: skewX(-22deg);
+}
+.contentBox:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #c9262d;
+  z-index: -2;
+}
+.skewLine {
+  position: absolute;
+  top: 0px;
+  width: 70px;
+  height: 100%;
+}
+
+.skewLine:before,
+.skewLine:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 100%;
+}
+.skewLine:before {
+  left: 0px;
+  bottom: -40px;
+  background: #c9262d;
+}
+.skewLine:after {
+  left: 25px;
+  top: -40px;
+  background: #959596;
+}
+.lineLeft {
+  left: 0px;
+  top: 0px;
+}
+.lineRight {
+  right: -15px;
+  top: 0px;
+}
+@media (max-width: 800px) {
+  .introSection {
+    margin: 2rem 1rem;
+  }
+  .contentBox::before,
+  .skewLine {
+    transform: skew(0deg);
+  }
+  .inner {
+    padding: 0;
+  }
+  .contentBox {
+    padding: 2rem 1.5rem;
+  }
+  .skewLine {
+    display: none;
+  }
+}

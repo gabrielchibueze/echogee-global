@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --ourServicesSectionColorRed: #fd1f28;
+
+  /* --background: #ffffff;
+  --foreground: #171717; */
+  --paddingD: 0 7%;
+  --paddingM: 0 2rem;
+  --colorRed: #eb1d1d;
+  --originalColor: #757575;
+  --originalBackground: #ffffff;
+  --animationSlideIn: slideIn 0.2s ease;
+  --componentSlideIn: componentSlideInY 1s ease-in-out;
+  --componentSlideInTop: componentSlideInTop 1.5s ease;
+  --componentSlideInBottom: componentSlideInBottom 1.5s ease;
+  --componentSlideInRight: componentSlideInRight 1.5s ease;
+  --componentSlideInLeft: componentSlideInLeft 1.5s ease;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+@keyframes slideIn {
+  from {
+    top: 12rem;
+  }
+
+  to {
+    top: 10rem;
+  }
+}
+
+@keyframes componentSlideInX {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes componentSlideInY {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes componentSlideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-300%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes componentSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(300%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes componentSlideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-300%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes componentSlideInBottom {
+  from {
+    opacity: 0;
+    transform: translateX(300%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--foreground);
+  background: var(--background);
+  color: #0a0a0a;
+  background: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: "Century Gothic";
+  font-size: 13px;
+  color: var(--originalColor);
+  line-height: 1.8em;
+  font-weight: 400;
+  background-color: var(--originalBackground);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+h4 {
+  font-size: 1rem;
+}
+p {
+  font-size: 0.8rem;
+}
+a {
+  font-size: 0.8rem;
+}

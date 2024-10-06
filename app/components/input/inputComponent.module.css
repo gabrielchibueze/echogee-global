@@ -1,0 +1,39 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.input label {
+  /* color: #0d141a; */
+  font-weight: 600;
+}
+.input > input,
+.input > textarea {
+  font-family: inherit;
+  border: 0.2px solid#1f4c91;
+  background-color: #ffffff;
+  /* color: #0d141a; */
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  overflow: hidden;
+  outline: none;
+  font-family: inherit;
+  border-radius: 0.2rem;
+}
+.input > textarea::placeholder {
+  font-size: 0.85rem;
+  font-family: inherit;
+  /* color: #223f68; */
+}
+.input > textarea {
+  resize: none;
+}
+.input > input:focus,
+.input > textarea:focus {
+  outline: 1px rgb(82, 70, 70) solid;
+}
+
+.input .touched.invalid {
+  border-color: red;
+  outline: 1px rgb(217, 14, 14) solid;
+}

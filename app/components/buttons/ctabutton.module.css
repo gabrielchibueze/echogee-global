@@ -1,0 +1,61 @@
+.cta {
+  display: flex;
+  font-size: 0.8rem;
+  gap: 1rem;
+}
+.cta > .accent,
+.cta > .flat,
+.cta > .raised {
+  padding: 0.8rem 2.6rem;
+  border-radius: 2rem;
+}
+.cta > .accent {
+  font-weight: lighter;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #0b4c6c;
+  background-color: #1d3557;
+}
+.cta > .raised {
+  font-weight: lighter;
+  /* color: #e5e2e2; */
+  font-weight: bold;
+  text-decoration: none;
+  background: #ff7243;
+  background-color: #f73206;
+}
+.cta > a:hover,
+.cta > a:active,
+.cta > button:hover,
+.cta > button:active {
+  background-color: #3d7f9f;
+}
+.cta > .accent:hover {
+  box-shadow: 1px 2px 15px #f5f3f281;
+}
+.cta > .flat {
+  background: transparent;
+  border: 1px solid #2e3b4e;
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  text-decoration: none;
+}
+.cta > .flat:hover,
+.cta > .flat:active {
+  color: #ffffff;
+}
+.cta > .raised:hover {
+  background-color: #ff7043;
+}
+
+.cta > button {
+  border: 1px solid grey;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cta > button:disabled {
+  cursor: not-allowed;
+}

@@ -1,0 +1,125 @@
+.RegisterComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1a1a1a;
+  width: 90%;
+  max-width: 90rem;
+  min-height: 70vh;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.topsection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 90rem;
+  display: flex;
+  justify-content: space-around;
+}
+.formsection {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  .topsection {
+    flex-direction: column;
+  }
+  .RegisterComponent {
+    width: 100%;
+    flex-direction: column;
+  }
+  .formsection {
+    padding-top: 0rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.header > h1 {
+  font-size: 2.5rem;
+}
+@media (min-width: 800px) {
+  .header {
+    max-width: 20rem;
+  }
+  .formsection {
+    border-bottom-right-radius: 0rem;
+    width: 50%;
+    margin-left: auto;
+  }
+  .form {
+    margin-top: -5rem;
+  }
+}
+@media (max-width: 500px) {
+  .formsection {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
+
+.imageSection {
+  margin-top: -4rem;
+  height: auto;
+  width: 100%;
+  z-index: -5;
+}
+.registerImage {
+  position: relative;
+  height: 20rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.registerImage img {
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.donate {
+  /* background-color: aquamarine; */
+  background-color: none;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  font-size: smaller;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+.innerDonate {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  background-color: #1d3557;
+  color: #ffffff;
+  gap: 1rem;
+  margin: 0 auto;
+  width: 90%;
+}
+@media (min-width: 800px) {
+  .donate {
+    height: 20rem;
+    padding-top: 2rem;
+  }
+  .innerDonate {
+    width: 50%;
+    padding: 3rem;
+  }
+}

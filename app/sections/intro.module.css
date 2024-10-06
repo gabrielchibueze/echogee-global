@@ -1,0 +1,72 @@
+.intro {
+  background-image: url("/WCC1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 80vh;
+  color: white;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+  width: 100%;
+  padding-top: 4rem;
+  height: 80vh;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.content > h1,
+.subsection {
+  max-width: 50%;
+}
+.intotext {
+  font-size: 3.5rem;
+}
+
+.subsection p {
+  font-size: 1rem;
+}
+.intotext {
+  margin: 0;
+}
+.subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.subsection h3 {
+  font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+  .content {
+    gap: 1rem;
+  }
+  .content > h1,
+  .subsection {
+    max-width: 80%;
+  }
+  .intotext {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .content {
+    gap: 1rem;
+  }
+  .intotext {
+    font-size: 2.3rem;
+  }
+}

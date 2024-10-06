@@ -1,0 +1,34 @@
+.page {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  gap: 0;
+}
+.content {
+  margin-top: 5rem;
+  padding: var(--paddingD);
+  padding-top: 0;
+  width: 100%;
+  min-height: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 800px) {
+  .loadComponents {
+    padding: var(--paddingD);
+  }
+}
+@media (max-width: 800px) {
+  .loadComponents {
+    width: 100%;
+    padding: var(--paddingM);
+    padding-top: 0;
+  }
+}
+
+.loadComponents,
+.loadComponentsSimple {
+  animation: var(--componentSlideIn);
+}

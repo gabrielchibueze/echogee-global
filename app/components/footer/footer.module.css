@@ -1,0 +1,145 @@
+.footerDiv {
+  background-color: #314150;
+  line-height: 1.8;
+}
+.footerDiv > p {
+  color: #ffffff;
+  margin-left: 7%;
+  margin-bottom: 2rem;
+}
+.footerQuickLinksTop {
+  background-color: #314150;
+  color: #cddeee;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4% 7%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.quickLinksContents {
+  display: flex;
+  flex-grow: 1;
+  gap: 3rem;
+}
+.quickLinkSections {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.quickLinkSections > h4 {
+  color: #ffffff;
+  width: fit-content;
+}
+.quickLinkSections > h4::before {
+  content: "";
+  height: 3px;
+  width: 70px;
+  background-color: #cc3333;
+  margin-top: 2rem;
+  position: absolute;
+}
+.quickLinkSections > ul > li {
+  list-style: none;
+}
+.quickLinkSections > ul > li > a {
+  font-size: 0.8rem;
+}
+.quickLinkSections > ul > li > a:hover,
+.quickLinkSections > ul > li > a:active {
+  color: #ffffff;
+}
+
+.socialMenuLinks {
+  display: flex;
+  gap: 1rem;
+  height: 50px;
+  width: fit-content;
+}
+.socialMenuLinks > a > li {
+  list-style: none;
+  cursor: pointer;
+  border: none;
+  background-color: #435464;
+  color: #999999;
+  height: 30px;
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #435464;
+  transition: all 0.5s ease;
+}
+.socialMenuLinks > a {
+  font-size: 1rem;
+}
+
+.socialMenuLinks > a > li:hover,
+.socialMenuLinks > a > li:active {
+  border: 1px solid rgb(155, 130, 6);
+  background: transparent;
+  color: #ffffff;
+  z-index: 6;
+  padding: 0.3rem 0.6rem;
+  font-size: larger;
+  height: 40px;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 800px) {
+  .footerDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerQuickLinksTop {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem;
+    /* margin-left: -6rem; */
+  }
+  .quickLinksContents {
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .footerDiv > p {
+    margin-left: -2rem;
+  }
+  .fastlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+.subFooter {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #293744;
+}
+.subFooter > section {
+  display: flex;
+  font-size: 0.6rem;
+}
+@media (max-width: 800px) {
+  .subFooter {
+    gap: 0;
+    flex-direction: column;
+  }
+}
+
+.contactUsSection {
+  max-width: 250px;
+}
+.contactUsSection > li {
+  font-size: 0.8rem;
+}
+.contactUsSection > li > span {
+  font-weight: bold;
+}
